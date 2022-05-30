@@ -105,7 +105,6 @@ class Game {
 				}-number font-big">0</span></div>
 				`
 			}
-			// this.setPlayerTurn(1)
 		}
 	}
 	compareMoves() {
@@ -118,7 +117,6 @@ class Game {
 					document.querySelector('[data-card-number="' + card.order + '"]').classList.add('found')
 				})
 				this.score[this.playerTurn - 1].value++
-				this.updateScores()
 				this.checkWin()
 			} else {
 				this.currentMoves.forEach((card) => {
@@ -206,6 +204,7 @@ class Game {
 			this.theme === 'numbers' ? (content = target.value) : (content = `<i class="fa ${icons[target.value - 1]}"></i>`)
 			e.target.querySelector('.back').innerHTML = content
 			this.compareMoves()
+			this.updateScores()
 		}
 	}
 	setPlayerTurn(player) {

@@ -256,6 +256,11 @@ table {
     margin-top: min(24px, 3vw);
   }
 }
+.header .menu {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
 
 .scores {
   display: flex;
