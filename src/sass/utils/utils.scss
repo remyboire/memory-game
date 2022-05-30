@@ -1,0 +1,41 @@
+.bg-white {
+	background-color: $white;
+}
+.radius {
+	border-radius: 20px;
+}
+
+.hide {
+	display: none;
+	visibility: hidden;
+}
+
+.mr-auto {
+	margin-right: auto;
+}
+.ml-auto {
+	margin-left: auto;
+}
+.flex {
+	display: flex;
+	gap: 16px;
+}
+.w-100 {
+	width: 100%;
+}
+.onMobile {
+	display: none;
+	@media screen and(max-width: 768px) {
+		display: block;
+	}
+}
+
+.onDesktop {
+	display: none;
+	@media screen and(min-width: 768px) {
+		display: block;
+	}
+}
+.fg-1 {
+	flex-grow: 1;
+}

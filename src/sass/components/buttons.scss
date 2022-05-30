@@ -1,0 +1,67 @@
+.button {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	padding-top: 14px;
+	padding-bottom: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 28px;
+	border: none;
+	background-color: $primary300;
+	cursor: pointer;
+	&:hover {
+		background-color: $gray600;
+		color: $white;
+	}
+	&.accent {
+		background-color: $accent600;
+		color: $white;
+		&:hover {
+			background-color: $accent300;
+		}
+	}
+}
+
+.input-radio {
+	flex-grow: 1;
+}
+.input-radio input[type='radio'] {
+	display: none;
+}
+.input-radio input[type='radio'] + label {
+	display: block;
+	font-size: 26px;
+	width: 100%;
+	padding-top: 14px;
+	padding-bottom: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 28px;
+	background-color: $primary300;
+	color: $white;
+	cursor: pointer;
+	&:hover {
+		background-color: $primary600;
+	}
+}
+.input-radio input[type='radio']:checked + label {
+	background-color: $primary900;
+}
+
+.input-radio button[type='submit'] {
+	display: block;
+	font-size: 26px;
+	font-weight: 700;
+	width: 100%;
+	padding-top: 14px;
+	padding-bottom: 16px;
+	border-radius: 28px;
+	background-color: $accent600;
+	color: $white;
+	border: none;
+	cursor: pointer;
+	&:hover {
+		background-color: $accent300;
+	}
+}

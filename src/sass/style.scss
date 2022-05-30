@@ -1,0 +1,24 @@
+@import 'utils/variables.scss';
+
+@import 'components/reset.scss';
+@import 'components/setup.scss';
+@import 'components/header.scss';
+@import 'components/logo.scss';
+@import 'components/buttons.scss';
+@import 'components/game.scss';
+@import 'components/board.scss';
+@import 'components/card.scss';
+
+@import 'utils/utils.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
+
+body {
+	font-family: 'Atkinson Hyperlegible', sans-serif;
+	padding-left: $spacing;
+	padding-right: $spacing;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: space-between;
+}

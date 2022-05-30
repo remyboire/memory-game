@@ -1,0 +1,13 @@
+.board {
+	display: grid;
+	width: 100%;
+	max-width: 572px;
+	max-height: auto;
+	min-height: 0;
+	min-width: 0;
+	gap: $spacing;
+	margin: 50px auto;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+}

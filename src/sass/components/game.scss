@@ -1,0 +1,40 @@
+.in-setup {
+	background-color: $primary900;
+	transition: background-color 0.5s ease-in-out;
+
+	.header {
+		.menu {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	.board {
+		display: none;
+	}
+	.scores {
+		display: none;
+	}
+	.popup-wrapper {
+		display: none;
+	}
+}
+.in-game {
+	transition: background-color 0.5s ease-in-out;
+	background-color: $white;
+	.setup {
+		display: none;
+	}
+	.popup-wrapper {
+		display: none;
+	}
+}
+.game-finished {
+	.setup {
+		display: none;
+	}
+	.popup-wrapper {
+		display: flex;
+		opacity: 1;
+		transition: opacity 1.5s ease-in-out;
+	}
+}

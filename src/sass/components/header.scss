@@ -1,0 +1,132 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	max-width: 1110px;
+	width: 100%;
+	gap: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 67px;
+	@media screen and(max-width: 768px) {
+		margin-top: $spacing;
+	}
+}
+.scores {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	gap: $spacing;
+	color: $primary600;
+	margin-bottom: 74px;
+	@media screen and(max-width: 768px) {
+		margin-bottom: $spacing;
+	}
+
+	& .score {
+		max-width: 230px;
+		flex-grow: 1;
+		background-color: $gray300;
+		padding: 17px 24px;
+		display: flex;
+		gap: 5px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 10px;
+		position: relative;
+		transition: background-color 0.3s ease, color 0.3s ease;
+
+		@media screen and(min-width: 768px) {
+			flex-direction: row;
+		}
+
+		@media screen and(max-width: 768px) {
+			& .player-name {
+				width: 10px;
+				overflow: hidden;
+				display: inline-flex;
+			}
+		}
+		&::before {
+			content: 'CURRENT TURN';
+			font-size: 13px;
+			letter-spacing: 5px;
+			position: absolute;
+			bottom: -36px;
+			left: 0;
+			width: 100%;
+			color: $primary900;
+			text-align: center;
+			transform: translateY(13px);
+			opacity: 0;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			width: 28px;
+			height: 28px;
+			transform: translateX(-14px) rotate(45deg);
+			background-color: $gray300;
+			z-index: -1;
+			transition: background-color 0.3s ease, top 0.3s ease;
+		}
+		&.active {
+			background-color: $accent600;
+			color: $white;
+			transition: background-color 0.3s ease, color 0.3s ease;
+			&::before {
+				transform: translateY(0);
+				opacity: 1;
+				transition: transform 0.3s ease, opacity 0.3s ease;
+			}
+			&::after {
+				top: -14px;
+				transition: background-color 0.3s ease, top 0.3s ease;
+				background-color: $accent600;
+			}
+			.font-big {
+				color: $white;
+			}
+		}
+		.font-big {
+			font-size: 32px;
+			color: $primary900;
+		}
+	}
+}
+
+.results {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	.result {
+		width: 100%;
+		background-color: $gray300;
+		padding: 17px 32px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 10px;
+		.font-big {
+			font-size: 32px;
+			color: $primary900;
+		}
+	}
+	.winner {
+		color: $white;
+		background-color: $primary900;
+		.font-big {
+			color: $white;
+		}
+	}
+}
